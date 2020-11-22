@@ -1,0 +1,60 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  height: 100vh;
+
+  align-items: center;
+  justify-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(273, 75%, 66%),
+    hsl(240, 73%, 65%)
+  );
+}
+
+body {
+  margin: 50px;
+}
+
+.password-field {
+  display: inline-block;
+}
+
+.password-field:after {
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  margin-top: 3px;
+}
+
+.password-field.level0:after {
+  width: 25%;
+  background: red;
+}
+
+.password-field.level1:after {
+  width: 50%;
+  background: orange;
+}
+
+.password-field.level2:after {
+  width: 75%;
+  background: gold;
+}
+
+.password-field.level3:after {
+  width: 100%;
+  background: green;
+}
